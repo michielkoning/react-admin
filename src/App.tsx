@@ -3,12 +3,12 @@ import {
   CustomRoutes,
   Resource,
 } from "react-admin";
-import { dataProvider } from "./DataProviders/Supabase";
-import { RecipesList } from './Views/Recipes/RecipesList'
-import { authProvider } from "./AuthProvider/Supabase";
+import { dataProvider } from "./DataProviders/SupabaseDataProvider";
+import { authProvider } from "./AuthProvider/SupabaseAuthProvider";
 import { LoginPage, SetPasswordPage, ForgotPasswordPage } from 'ra-supabase';
 import { Route } from 'react-router-dom';
 import { i18nProvider } from "./I18n/I18nProdvider";
+import Recipes from "./Views/Recipes";
 
 export const App = () => (
 
@@ -23,6 +23,6 @@ export const App = () => (
         element={<ForgotPasswordPage />}
       />
     </CustomRoutes>
-    <Resource name="recipes" list={RecipesList} />
+    <Resource name="recipes" {...Recipes} />
   </Admin>
 );

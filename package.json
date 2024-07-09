@@ -10,6 +10,7 @@
     "format": "prettier --write ./src"
   },
   "dependencies": {
+    "ra-language-dutch": "^4.6.1",
     "ra-supabase": "^3.0.0",
     "ra-supabase-ui-materialui": "^3.0.0",
     "react": "^18.3.1",
