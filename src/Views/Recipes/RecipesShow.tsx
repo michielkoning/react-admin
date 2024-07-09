@@ -1,6 +1,6 @@
+import { FunctionComponent } from 'react';
 import { Show, SimpleShowLayout, TextField, DateField, RichTextField, useRecordContext, ShowProps } from 'react-admin';
 import { Recipe } from '../../Types';
-import { FunctionComponent } from 'react';
 
 
 const RecipeTitle: FunctionComponent = () => {
@@ -14,7 +14,7 @@ export const RecipesShow: FunctionComponent<ShowProps> = () => (
     <SimpleShowLayout>
       <TextField<Recipe> source="title" />
       <RichTextField<Recipe> source="content" />
-      <DateField<Recipe> label="Publication date" source="inserted_at" />
+      <DateField<Recipe> source="inserted_at" />
     </SimpleShowLayout>
   </Show>
 );

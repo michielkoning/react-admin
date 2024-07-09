@@ -1,10 +1,11 @@
-import { Edit, SimpleForm, TextInput } from "react-admin";
-import type { Recipe } from "../../Types";
+import { FunctionComponent } from "react";
+import { Edit, EditProps, SimpleForm, TextInput, required } from "react-admin";
 
-export const RecipesEdit = () => (
+
+    export const RecipesEdit: FunctionComponent<EditProps> = () => (
   <Edit>
     <SimpleForm>
-      <TextInput<Recipe> source="title" />
+      <TextInput source="title" validate={required()} />
     </SimpleForm>
   </Edit>
 );
