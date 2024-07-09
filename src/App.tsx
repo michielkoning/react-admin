@@ -3,7 +3,7 @@ import { Admin, CustomRoutes, Resource } from "react-admin";
 import { LoginPage, SetPasswordPage, ForgotPasswordPage } from "ra-supabase";
 import { Route, BrowserRouter } from "react-router-dom";
 import { authProvider } from "./AuthProvider/SupabaseAuthProvider";
-import { OfflineNotification } from "./Components/OfflineNotification";
+import { PwaNotifications } from "./Components/PwaNotifications";
 import { dataProvider } from "./DataProviders/SupabaseDataProvider";
 import { i18nProvider } from "./I18n/I18nProvider";
 import { RecipeRecourses } from "./Views/Recipes";
@@ -28,6 +28,6 @@ export const App: FunctionComponent = () => (
         <Resource {...RecipeRecourses} />
       </Admin>
     </BrowserRouter>
-    <OfflineNotification />
+    <PwaNotifications />
   </>
 );
