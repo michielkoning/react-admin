@@ -1,3 +1,3 @@
 import { Tables } from "./Supabase";
 
-            export type Recipe = Tables<"recipes">;
+export type Recipe = Tables<"recipes">;

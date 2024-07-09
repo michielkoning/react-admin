@@ -4,203 +4,203 @@ export type Json =
   | boolean
   | null
   | { [key: string]: Json | undefined }
-  | Json[]
+  | Json[];
 
 export type Database = {
   public: {
     Tables: {
       recipe_ingredients: {
         Row: {
-          amount: number | null
-          id: string
-          inserted_at: string
-          title: string
-          user_id: string
-        }
+          amount: number | null;
+          id: string;
+          inserted_at: string;
+          title: string;
+          user_id: string;
+        };
         Insert: {
-          amount?: number | null
-          id?: string
-          inserted_at?: string
-          title: string
-          user_id: string
-        }
+          amount?: number | null;
+          id?: string;
+          inserted_at?: string;
+          title: string;
+          user_id: string;
+        };
         Update: {
-          amount?: number | null
-          id?: string
-          inserted_at?: string
-          title?: string
-          user_id?: string
-        }
+          amount?: number | null;
+          id?: string;
+          inserted_at?: string;
+          title?: string;
+          user_id?: string;
+        };
         Relationships: [
           {
-            foreignKeyName: "recipe_ingredients_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "users"
-            referencedColumns: ["id"]
+            foreignKeyName: "recipe_ingredients_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referencedRelation: "users";
+            referencedColumns: ["id"];
           },
-        ]
-      }
+        ];
+      };
       recipes: {
         Row: {
-          content: string[] | null
-          id: string
-          inserted_at: string
-          persons: number
-          preperationTime: number
-          source: string | null
-          title: string
-          user_id: string
-        }
+          content: string[] | null;
+          id: string;
+          inserted_at: string;
+          persons: number;
+          preperationTime: number;
+          source: string | null;
+          title: string;
+          user_id: string;
+        };
         Insert: {
-          content?: string[] | null
-          id?: string
-          ingredients?: Json | null
-          inserted_at?: string
-          persons?: number
-          preperationTime?: number
-          source?: string | null
-          title: string
-          user_id: string
-        }
+          content?: string[] | null;
+          id?: string;
+          ingredients?: Json | null;
+          inserted_at?: string;
+          persons?: number;
+          preperationTime?: number;
+          source?: string | null;
+          title: string;
+          user_id: string;
+        };
         Update: {
-          content?: string[] | null
-          id?: string
-          ingredients?: Json | null
-          inserted_at?: string
-          persons?: number
-          preperationTime?: number
-          source?: string | null
-          title?: string
-          user_id?: string
-        }
+          content?: string[] | null;
+          id?: string;
+          ingredients?: Json | null;
+          inserted_at?: string;
+          persons?: number;
+          preperationTime?: number;
+          source?: string | null;
+          title?: string;
+          user_id?: string;
+        };
         Relationships: [
           {
-            foreignKeyName: "recipes_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "users"
-            referencedColumns: ["id"]
+            foreignKeyName: "recipes_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referencedRelation: "users";
+            referencedColumns: ["id"];
           },
-        ]
-      }
+        ];
+      };
       todo: {
         Row: {
-          created_at: string | null
-          id: string
-          is_complete: boolean | null
-          title: string | null
-          user_id: string | null
-        }
+          created_at: string | null;
+          id: string;
+          is_complete: boolean | null;
+          title: string | null;
+          user_id: string | null;
+        };
         Insert: {
-          created_at?: string | null
-          id?: string
-          is_complete?: boolean | null
-          title?: string | null
-          user_id?: string | null
-        }
+          created_at?: string | null;
+          id?: string;
+          is_complete?: boolean | null;
+          title?: string | null;
+          user_id?: string | null;
+        };
         Update: {
-          created_at?: string | null
-          id?: string
-          is_complete?: boolean | null
-          title?: string | null
-          user_id?: string | null
-        }
-        Relationships: []
-      }
+          created_at?: string | null;
+          id?: string;
+          is_complete?: boolean | null;
+          title?: string | null;
+          user_id?: string | null;
+        };
+        Relationships: [];
+      };
       weekmenu: {
         Row: {
-          archived: boolean
-          id: string
-          inserted_at: string
-          user_id: string
-        }
+          archived: boolean;
+          id: string;
+          inserted_at: string;
+          user_id: string;
+        };
         Insert: {
-          archived?: boolean
-          id?: string
-          inserted_at?: string
-          user_id: string
-        }
+          archived?: boolean;
+          id?: string;
+          inserted_at?: string;
+          user_id: string;
+        };
         Update: {
-          archived?: boolean
-          id?: string
-          inserted_at?: string
-          user_id?: string
-        }
+          archived?: boolean;
+          id?: string;
+          inserted_at?: string;
+          user_id?: string;
+        };
         Relationships: [
           {
-            foreignKeyName: "weekmenu_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "users"
-            referencedColumns: ["id"]
+            foreignKeyName: "weekmenu_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referencedRelation: "users";
+            referencedColumns: ["id"];
           },
-        ]
-      }
+        ];
+      };
       weekmenu_days: {
         Row: {
-          id: string
-          inserted_at: string
-          user_id: string
-          weekmenu: string
-        }
+          id: string;
+          inserted_at: string;
+          user_id: string;
+          weekmenu: string;
+        };
         Insert: {
-          id?: string
-          inserted_at?: string
-          user_id: string
-          weekmenu: string
-        }
+          id?: string;
+          inserted_at?: string;
+          user_id: string;
+          weekmenu: string;
+        };
         Update: {
-          id?: string
-          inserted_at?: string
-          user_id?: string
-          weekmenu?: string
-        }
+          id?: string;
+          inserted_at?: string;
+          user_id?: string;
+          weekmenu?: string;
+        };
         Relationships: [
           {
-            foreignKeyName: "weekmenu_days_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "users"
-            referencedColumns: ["id"]
+            foreignKeyName: "weekmenu_days_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referencedRelation: "users";
+            referencedColumns: ["id"];
           },
           {
-            foreignKeyName: "weekmenu_days_weekmenu_fkey"
-            columns: ["weekmenu"]
-            isOneToOne: false
-            referencedRelation: "weekmenu"
-            referencedColumns: ["id"]
+            foreignKeyName: "weekmenu_days_weekmenu_fkey";
+            columns: ["weekmenu"];
+            isOneToOne: false;
+            referencedRelation: "weekmenu";
+            referencedColumns: ["id"];
           },
-        ]
-      }
-    }
+        ];
+      };
+    };
     Views: {
       transcripts: {
         Row: {
-          title: string | null
-        }
+          title: string | null;
+        };
         Insert: {
-          title?: string | null
-        }
+          title?: string | null;
+        };
         Update: {
-          title?: string | null
-        }
-        Relationships: []
-      }
-    }
+          title?: string | null;
+        };
+        Relationships: [];
+      };
+    };
     Functions: {
-      [_ in never]: never
-    }
+      [_ in never]: never;
+    };
     Enums: {
-      [_ in never]: never
-    }
+      [_ in never]: never;
+    };
     CompositeTypes: {
-      [_ in never]: never
-    }
-  }
-}
+      [_ in never]: never;
+    };
+  };
+};
 
-type PublicSchema = Database[Extract<keyof Database, "public">]
+type PublicSchema = Database[Extract<keyof Database, "public">];
 
 export type Tables<
   PublicTableNameOrOptions extends
@@ -213,7 +213,7 @@ export type Tables<
 > = PublicTableNameOrOptions extends { schema: keyof Database }
   ? (Database[PublicTableNameOrOptions["schema"]]["Tables"] &
       Database[PublicTableNameOrOptions["schema"]]["Views"])[TableName] extends {
-      Row: infer R
+      Row: infer R;
     }
     ? R
     : never
@@ -221,11 +221,11 @@ export type Tables<
         PublicSchema["Views"])
     ? (PublicSchema["Tables"] &
         PublicSchema["Views"])[PublicTableNameOrOptions] extends {
-        Row: infer R
+        Row: infer R;
       }
       ? R
       : never
-    : never
+    : never;
 
 export type TablesInsert<
   PublicTableNameOrOptions extends
@@ -236,17 +236,17 @@ export type TablesInsert<
     : never = never,
 > = PublicTableNameOrOptions extends { schema: keyof Database }
   ? Database[PublicTableNameOrOptions["schema"]]["Tables"][TableName] extends {
-      Insert: infer I
+      Insert: infer I;
     }
     ? I
     : never
   : PublicTableNameOrOptions extends keyof PublicSchema["Tables"]
     ? PublicSchema["Tables"][PublicTableNameOrOptions] extends {
-        Insert: infer I
+        Insert: infer I;
       }
       ? I
       : never
-    : never
+    : never;
 
 export type TablesUpdate<
   PublicTableNameOrOptions extends
@@ -257,17 +257,17 @@ export type TablesUpdate<
     : never = never,
 > = PublicTableNameOrOptions extends { schema: keyof Database }
   ? Database[PublicTableNameOrOptions["schema"]]["Tables"][TableName] extends {
-      Update: infer U
+      Update: infer U;
     }
     ? U
     : never
   : PublicTableNameOrOptions extends keyof PublicSchema["Tables"]
     ? PublicSchema["Tables"][PublicTableNameOrOptions] extends {
-        Update: infer U
+        Update: infer U;
       }
       ? U
       : never
-    : never
+    : never;
 
 export type Enums<
   PublicEnumNameOrOptions extends
@@ -280,4 +280,4 @@ export type Enums<
   ? Database[PublicEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : PublicEnumNameOrOptions extends keyof PublicSchema["Enums"]
     ? PublicSchema["Enums"][PublicEnumNameOrOptions]
-    : never
+    : never;

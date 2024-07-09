@@ -1,6 +1,14 @@
-import { FunctionComponent } from 'react';
-import { Show, SimpleShowLayout, TextField, DateField, RichTextField, useRecordContext, ShowProps } from 'react-admin';
-import { Recipe } from '../../Types';
+import { FunctionComponent } from "react";
+import {
+  Show,
+  SimpleShowLayout,
+  TextField,
+  DateField,
+  RichTextField,
+  useRecordContext,
+  ShowProps,
+} from "react-admin";
+import { Recipe } from "../../Types";
 
 const RecipeTitle: FunctionComponent = () => {
   const record = useRecordContext<Recipe>();
