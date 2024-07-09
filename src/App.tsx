@@ -23,6 +23,6 @@ export const App = () => (
         element={<ForgotPasswordPage />}
       />
     </CustomRoutes>
-    <Resource name="recipes" {...Recipes} />
+    <Resource {...Recipes} />
   </Admin>
 );
