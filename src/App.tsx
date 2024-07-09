@@ -9,9 +9,9 @@ import { LoginPage, SetPasswordPage, ForgotPasswordPage } from 'ra-supabase';
 import { Route } from 'react-router-dom';
 import { i18nProvider } from "./I18n/I18nProdvider";
 import Recipes from "./Views/Recipes";
+import { FunctionComponent } from "react";
 
-export const App = () => (
-
+export const App: FunctionComponent = () => (
   <Admin dataProvider={dataProvider} authProvider={authProvider} loginPage={LoginPage} i18nProvider={i18nProvider}>
     <CustomRoutes noLayout>
       <Route
