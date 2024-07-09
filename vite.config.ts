@@ -15,7 +15,7 @@ export default defineConfig({
       },
 
       manifest: {
-        name: "my-vue-app",
+        name: "React Admin",
         short_name: "my-vue-app",
         description: "my-vue-app",
         theme_color: "#ffffff",
