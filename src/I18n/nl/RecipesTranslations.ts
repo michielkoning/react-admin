@@ -2,7 +2,8 @@ export const RecipesTranslations = {
   resources: {
     recipes: {
       fields: {
-        title: 'Titel'
+        title: 'Titel',
+        content: 'Beschrijving'
       } 
     }
   } 
