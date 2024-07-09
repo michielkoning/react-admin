@@ -4,12 +4,10 @@ import { RecipesEdit } from "./RecipesEdit";
 import { RecipesList } from "./RecipesList";
 import { RecipesShow } from "./RecipesShow";
 
-const RecipeRecourse: ResourceProps = {
+export const RecipeRecourses: ResourceProps = {
   name: "recipes",
   list: RecipesList,
   show: RecipesShow,
   edit: RecipesEdit,
   icon: DescriptionIcon,
 };
-
-export default RecipeRecourse;
