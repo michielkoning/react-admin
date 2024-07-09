@@ -8,7 +8,7 @@ import { LoginPage, SetPasswordPage, ForgotPasswordPage } from 'ra-supabase';
 import { Route } from 'react-router-dom';
 import { authProvider } from "./AuthProvider/SupabaseAuthProvider";
 import { dataProvider } from "./DataProviders/SupabaseDataProvider";
-import { i18nProvider } from "./I18n/I18nProdvider";
+import { i18nProvider } from "./I18n/I18nProvider";
 import Recipes from "./Views/Recipes";
 
 export const App: FunctionComponent = () => (
